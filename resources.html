@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/ham.css" />
   <style>
@@ -167,6 +168,113 @@
     </div>
   </header>
 
+  <div class="header-search-overlay" id="headerSearchOverlay" aria-hidden="true">
+    <div class="search-form-wrap">
+      <button type="button" class="search-close" id="searchClose" aria-label="Close search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <form class="search-form" action="javascript:void(0);" method="get" role="search">
+        <input type="search" name="s" class="search-input" placeholder="Search..." autocomplete="off"
+          id="headerSearchInput" />
+        <button type="submit" class="search-submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="offcanvas" id="offcanvasMenu" aria-hidden="true">
+    <div class="offcanvas-backdrop" id="offcanvasBackdrop"></div>
+    <div class="offcanvas-panel">
+      <div class="offcanvas-header">
+        <a href="javascript:void(0);" class="offcanvas-logo">
+          <img src="images/Hexafab-logo.png" alt="Hexafab steels Coated Steel" />
+        </a>
+      </div>
+      <div class="offcanvas-body">
+        <div class="offcanvas-col">
+          <ul class="offcanvas-nav">
+            <li><a href="index.html">HOME</a></li>
+            <li>
+              <a href="about.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="projects.html">OUR PROJECTS</a>
+            </li>
+            <li>
+              <a href="contact.html">CONTACT US</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">BECOME A PARTNER</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">NEWS &amp; MEDIA</a>
+            </li>
+          </ul>
+        </div>
+        <div class="offcanvas-col">
+          <p class="offcanvas-col-label">OUR Products</p>
+          <ul class="offcanvas-brands">
+            <li>
+              <a href="javascript:void(0);">Standing Seam Roofing Sheet</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">Circular Corrugated Roofing Sheet</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">Trapezoidal Roofing Sheet</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">C/z Purlin</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">Deck sheet</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="offcanvas-footer">
+        <div class="offcanvas-social">
+          <span class="offcanvas-social-label">Follow us on:</span>
+          <a href="javascript:void(0);" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="javascript:void(0);" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg></a>
+          <a href="javascript:void(0);" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg></a>
+        </div>
+        <div class="offcanvas-footer-btns">
+          <a href="javascript:void(0);" class="btn-outline">Warranty check
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg></a>
+          <a href="javascript:void(0);" class="btn-solid">Store locator
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="offcanvas-close" id="offcanvasClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+  </div>
+
   <main>
     <section class="internal-hero" style="background-image: url('images/factory-image.webp');">
       <div class="internal-hero-content">
@@ -224,6 +332,7 @@
 
   <footer class="site-footer">
     <div class="footer-top" style="padding-bottom: 0 !important;">
+
       <div class="footer-col footer-about">
         <div class="footer-logo" style="max-width: 200px">
           <img src="images/footer-logo.png" alt="Hexafab steels" style="width: 100%" />
@@ -234,33 +343,43 @@
           setting new standards of excellence in the industry.
         </p>
       </div>
+
+
       <div class="footer-col">
         <p class="footer-col-heading">QUICK LINKS</p>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="projects.html">Gallery</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="store-locator.html">Store Locator</a></li>
+          <li>
+            <a href="about.html">About Us</a>
+          </li>
+          <li>
+            <a href="projects.html">Gallery</a>
+          </li>
+          <li>
+            <a href="resources.html">Resources</a>
+          </li>
+          <li>
+            <a href="store-locator.html">Store Locator</a>
+          </li>
         </ul>
       </div>
       <div class="footer-col">
         <p class="footer-col-heading">OUR PRODUCTS</p>
         <ul class="footer-links">
           <li>
-            <a href="products.html">Standing Seam Roofing Sheet</a>
+            <a href="javascript:void(0);">Standing Seam Roofing Sheet</a>
           </li>
           <li>
-            <a href="products.html">Circular Corrugated Roofing Sheet</a>
+            <a href="javascript:void(0);">Circular Corrugated Roofing Sheet</a>
           </li>
           <li>
-            <a href="products.html">Trapezoidal Roofing Sheet</a>
+            <a href="javascript:void(0);">Trapezoidal Roofing Sheet</a>
           </li>
           <li>
-            <a href="products.html">C/z Purlin</a>
+            <a href="javascript:void(0);">C/z Purlin</a>
           </li>
           <li>
-            <a href="products.html">Deck sheet</a>
+            <a href="javascript:void(0);">Deck sheet</a>
           </li>
         </ul>
       </div>
@@ -288,13 +407,15 @@
         <p class="footer-col-heading">RESOURCES</p>
         <ul class="footer-links">
           <li>
-            <a href="resources.html">Download Hexafab Steels Brochure</a>
+            <a href="javascript:void(0);">Download Hexafab Steels Brochure</a>
           </li>
         </ul>
       </div>
+
     </div>
 
     <div class="footer-top ccc" style="padding-top: 0 !important;">
+
       <div class="footer-contact-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -327,6 +448,7 @@
           </svg>
           <a href="mailto:info@hexafabsteels.com"><strong>Email:</strong> info@hexafabsteels.com</a>
         </div>
+
         <div class="contact-sub-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
@@ -339,6 +461,7 @@
       </div>
     </div>
 
+
     <div class="footer-bottom">
       <p class="footer-copyright">
         © Copyright 2024 Hexafab steels - All rights reserved
@@ -349,10 +472,103 @@
       </div>
       <div class="footer-social">
         <span class="footer-social-label">Follow us on:</span>
-        <a href="javascript:void(0);" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg></a>
-        <a href="javascript:void(0);" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /></svg></a>
+        <a href="javascript:void(0);" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg>
+        </a>
+        <a href="javascript:void(0);" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="javascript:void(0);" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
       </div>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module">
+    import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.18/dist/lenis.mjs"
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    })
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  </script>
+  <script>
+    ; (function () {
+      var searchBtn = document.querySelector(".header-search")
+      var overlay = document.getElementById("headerSearchOverlay")
+      var searchInput = document.getElementById("headerSearchInput")
+      var searchClose = document.getElementById("searchClose")
+      if (!searchBtn || !overlay) return
+      function openSearch() {
+        document.body.classList.add("is-search-open")
+        overlay.setAttribute("aria-hidden", "false")
+        if (searchInput) {
+          searchInput.focus()
+        }
+      }
+      function closeSearch() {
+        document.body.classList.remove("is-search-open")
+        overlay.setAttribute("aria-hidden", "true")
+      }
+      searchBtn.addEventListener("click", openSearch)
+      searchClose.addEventListener("click", closeSearch)
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) closeSearch()
+      })
+      document.addEventListener("keydown", function (e) {
+        if (
+          e.key === "Escape" &&
+          document.body.classList.contains("is-search-open")
+        )
+          closeSearch()
+      })
+    })()
+      ; (function () {
+        var menuToggle = document.querySelector(".menu-toggle")
+        var offcanvas = document.getElementById("offcanvasMenu")
+        var offcanvasClose = document.getElementById("offcanvasClose")
+        var offcanvasBackdrop = document.getElementById("offcanvasBackdrop")
+        if (!menuToggle || !offcanvas) return
+        function openOffcanvas() {
+          document.body.classList.add("is-offcanvas-open")
+          offcanvas.setAttribute("aria-hidden", "false")
+        }
+        function closeOffcanvas() {
+          document.body.classList.remove("is-offcanvas-open")
+          offcanvas.setAttribute("aria-hidden", "true")
+        }
+        menuToggle.addEventListener("click", openOffcanvas)
+        offcanvasClose.addEventListener("click", closeOffcanvas)
+        if (offcanvasBackdrop)
+          offcanvasBackdrop.addEventListener("click", closeOffcanvas)
+        document.addEventListener("keydown", function (e) {
+          if (
+            e.key === "Escape" &&
+            document.body.classList.contains("is-offcanvas-open")
+          )
+            closeOffcanvas()
+        })
+      })()
+  </script>
 </body>
 </html>
