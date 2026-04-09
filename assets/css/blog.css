@@ -1,4 +1,3 @@
-
 /* Revised Blog Details Styles */
 .blog-details-wrapper {
   display: grid;
@@ -222,7 +221,7 @@
   border: 1px solid #f0f0f0;
   padding: 2.5rem;
   border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
 }
 
 .blog-sidebar h3 {
@@ -398,15 +397,15 @@
     grid-template-columns: 1fr;
     gap: 4rem;
   }
-  
+
   .blog-main-content {
     max-width: 100%;
   }
-  
+
   .related-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .sticky-sidebar {
     position: static;
   }
@@ -416,12 +415,12 @@
   .post-meta-top {
     margin-bottom: 2rem;
   }
-  
+
   .article-rich-text .lead-paragraph {
     font-size: 1.25rem;
     margin-bottom: 2rem;
   }
-  
+
   .article-rich-text blockquote {
     margin: 3rem 0;
     padding: 2rem;
@@ -432,16 +431,16 @@
   .related-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .content-gallery {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .gallery-item img {
     height: auto;
   }
-  
+
   .post-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -452,24 +451,24 @@
   .post-meta-top {
     gap: 0.5rem 1rem;
   }
-  
+
   .post-meta-top .dot {
     display: none;
   }
-  
+
   .article-rich-text {
     font-size: 1.0625rem;
   }
-  
+
   .article-rich-text h2 {
     margin: 3rem 0 1.25rem;
   }
-  
+
   .article-rich-text blockquote::before {
     font-size: 4rem;
     left: 1rem;
   }
-  
+
   .blog-sidebar .sidebar-box {
     padding: 2rem 1.5rem;
   }
@@ -481,15 +480,9 @@
 
 /* Related Posts Area */
 .related-posts-area {
-  padding: 4.5rem 0;
+  padding: 4.5rem 4rem;
   background: #fcfdfe;
   border-top: 1px solid #eee;
-}
-
-.related-posts-area .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 4rem;
 }
 
 .related-posts-area .section-title {
@@ -504,4 +497,3 @@
     padding: 3.5rem 2rem;
   }
 }
-
