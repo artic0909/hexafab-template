@@ -481,9 +481,15 @@
 
 /* Related Posts Area */
 .related-posts-area {
-  padding: 4.5rem 4rem;
+  padding: 4.5rem 0;
   background: #fcfdfe;
   border-top: 1px solid #eee;
+}
+
+.related-posts-area .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 4rem;
 }
 
 .related-posts-area .section-title {
