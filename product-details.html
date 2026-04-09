@@ -68,134 +68,157 @@
     }
 
     .product-hero {
-      padding: 4rem 4rem 6rem;
-      background: white;
+      padding: 5rem 0;
+      background: #fbfcfd;
+      position: relative;
     }
 
-    .product-container {
+    .hero-grid-container {
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 4rem;
-      align-items: center;
+      padding: 0 4rem;
     }
 
-    @media (max-width: 1024px) {
-      .product-container {
-        grid-template-columns: 1fr;
+    .hero-top-meta {
+        margin-bottom: 2rem;
+    }
+
+    .hero-main-title {
+        font-size: clamp(3rem, 7vw, 5.5rem);
+        font-weight: 800;
+        color: #0d2840;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        margin-bottom: 4rem;
+        position: relative;
+    }
+
+    .hero-main-title span {
+        color: #3685b1;
+        display: block;
+        font-size: 0.4em;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .hero-split-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 6rem;
+        align-items: flex-start;
+    }
+
+    .hero-content-left {
+        padding-top: 2rem;
+    }
+
+    .hero-desc {
+        font-size: 1.25rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 3rem;
+        border-left: 4px solid #3685b1;
+        padding-left: 2rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-main-btn {
+        background: #0d2840;
+        color: white;
+        padding: 1.5rem 2.5rem;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+    }
+
+    .hero-main-btn:hover {
+        background: #3685b1;
+        padding-right: 3rem;
+    }
+
+    .hero-image-right {
+        position: relative;
+    }
+
+    .hero-image-right img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 50px 100px rgba(13, 40, 64, 0.15);
+    }
+
+    .floating-specs {
+        position: absolute;
+        bottom: -3rem;
+        left: -3rem;
+        background: white;
+        padding: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
-      }
-      .product-hero {
-        padding: 4rem 2rem;
-      }
+        box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        z-index: 2;
     }
 
-    .product-image-box {
-      position: relative;
-      border-radius: 32px;
-      overflow: hidden;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-      aspect-ratio: 1/1;
-      background: #f0f4f8;
+    .float-spec-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
-    .product-image-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+    .float-spec-label {
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: #3685b1;
+        font-weight: 800;
     }
 
-    .product-image-box:hover img {
-      transform: scale(1.08);
+    .float-spec-value {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: #0d2840;
     }
 
-    .product-info {
-      padding: 1rem;
+    @media (max-width: 1100px) {
+        .hero-split-layout {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+        .floating-specs {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            margin-top: 3rem;
+        }
     }
 
-    .product-tag {
-      display: inline-block;
-      padding: 0.6rem 1.5rem;
-      background: rgba(54, 133, 177, 0.08);
-      color: var(--primary-color);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-weight: 800;
-      font-size: 0.75rem;
-      border-radius: 100px;
-      margin-bottom: 1.5rem;
-      border: 1px solid rgba(54, 133, 177, 0.2);
-      backdrop-filter: blur(4px);
-    }
-
-    .product-title {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 700;
-      color: var(--secondary-color);
-      line-height: 1.05;
-      margin-bottom: 2rem;
-      letter-spacing: -0.02em;
-    }
-
-    .product-description {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 3rem;
-      max-width: 600px;
-    }
-
-    .specs-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-bottom: 4rem;
-      padding: 2rem;
-      background: var(--light-bg);
-      border-radius: 20px;
-    }
-
-    .spec-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .spec-label {
-      font-size: 0.75rem;
-      color: #999;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 700;
-    }
-
-    .spec-value {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--secondary-color);
-    }
-
-    .btn-large {
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.5rem 3.5rem;
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 16px;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      box-shadow: 0 15px 35px rgba(54, 133, 177, 0.3);
-    }
-
-    .btn-large:hover {
-      background: var(--secondary-color);
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 20px 45px rgba(13, 40, 64, 0.35);
+    @media (max-width: 768px) {
+        .hero-grid-container {
+            padding: 0 2rem;
+        }
+        .hero-main-title {
+            font-size: 3.5rem;
+        }
+        .hero-desc {
+            font-size: 1.1rem;
+            padding-left: 1.5rem;
+        }
+        .floating-specs {
+            grid-template-columns: 1fr;
+            padding: 2rem;
+            gap: 2rem;
+        }
     }
 
     /* Applications Section */
@@ -417,7 +440,7 @@
         <img src="images/Hexafab-logo.png" alt="Hexafab steels" />
       </a>
       <nav class="nav-main">
-        <a href="about.html">ABOUT US</a>
+        <a href="about.html" class="active">ABOUT US</a>
         <a href="products.html">PRODUCTS </a>
         <a href="contact.html">CONTACT US</a>
         <a href="projects.html">PROJECTS</a>
@@ -462,7 +485,7 @@
     <div class="offcanvas-backdrop" id="offcanvasBackdrop"></div>
     <div class="offcanvas-panel">
       <div class="offcanvas-header">
-        <a href="index.html" class="offcanvas-logo">
+        <a href="javascript:void(0);" class="offcanvas-logo">
           <img src="images/Hexafab-logo.png" alt="Hexafab steels Coated Steel" />
         </a>
       </div>
@@ -470,20 +493,41 @@
         <div class="offcanvas-col">
           <ul class="offcanvas-nav">
             <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="projects.html">OUR PROJECTS</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
-            <li><a href="become-a-partner.html">BECOME A PARTNER</a></li>
+            <li>
+              <a href="about.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="projects.html">OUR PROJECTS</a>
+            </li>
+            <li>
+              <a href="contact.html">CONTACT US</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">BECOME A PARTNER</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">NEWS &amp; MEDIA</a>
+            </li>
           </ul>
         </div>
         <div class="offcanvas-col">
           <p class="offcanvas-col-label">OUR Products</p>
           <ul class="offcanvas-brands">
-            <li><a href="product-details.html">Standing Seam Roofing Sheet</a></li>
-            <li><a href="product-details.html">Circular Corrugated Roofing Sheet</a></li>
-            <li><a href="product-details.html">Trapezoidal Roofing Sheet</a></li>
-            <li><a href="product-details.html">C/z Purlin</a></li>
-            <li><a href="product-details.html">Deck sheet</a></li>
+            <li>
+              <a href="product-details.html">Standing Seam Roofing Sheet</a>
+            </li>
+            <li>
+              <a href="product-details.html">Circular Corrugated Roofing Sheet</a>
+            </li>
+            <li>
+              <a href="product-details.html">Trapezoidal Roofing Sheet</a>
+            </li>
+            <li>
+              <a href="product-details.html">C/z Purlin</a>
+            </li>
+            <li>
+              <a href="product-details.html">Deck sheet</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -497,6 +541,23 @@
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
               <rect x="2" y="9" width="4" height="12" />
               <circle cx="4" cy="4" r="2" />
+            </svg></a>
+          <a href="javascript:void(0);" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg></a>
+        </div>
+        <div class="offcanvas-footer-btns">
+          <a href="javascript:void(0);" class="btn-outline">Warranty check
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg></a>
+          <a href="javascript:void(0);" class="btn-solid">Store locator
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
             </svg></a>
         </div>
       </div>
@@ -522,38 +583,47 @@
 
   <main>
     <section class="product-hero">
-      <div class="product-container">
-        <div class="product-image-box">
-          <img src="images/standing-seam-main.png" alt="Standing Seam Roofing Sheet" />
+      <div class="hero-grid-container">
+        <div class="hero-top-meta">
+            <h1 class="hero-main-title">
+                <span>The Engineering Standard</span>
+                Hexa-Standing Seam Series
+            </h1>
         </div>
-        <div class="product-info">
-          <span class="product-tag">Flagship Product</span>
-          <h1 class="product-title">Hexa-Standing <br>Seam Series</h1>
-          <p class="product-description">
-            Experience the pinnacle of roofing technology with our Standing Seam series. Engineered for visionary architects and industrial pioneers, this system offers a completely fastener-free surface, ensuring 100% watertight integrity and a modern, minimalist silhouette.
-          </p>
-          <div class="specs-grid">
-            <div class="spec-item">
-              <span class="spec-label">Substrate</span>
-              <span class="spec-value">Cold Rolled High-Tensile Steel</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">Profile Width</span>
-              <span class="spec-value">300mm / 450mm / 500mm</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">Finish</span>
-              <span class="spec-value">PVDF / SMP / SDP Coatings</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">Seam Height</span>
-              <span class="spec-value">65mm Double Lock</span>
+        <div class="hero-split-layout">
+          <div class="hero-content-left">
+            <p class="hero-desc">
+                Elevate your project with the high-performance Standing Seam system. Engineered for absolute watertightness and a clean, modern aesthetic that defines the future of industrial roofing.
+            </p>
+            <div class="hero-actions">
+                <a href="javascript:void(0);" class="hero-main-btn">
+                    <span>Download Technical Manual</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                </a>
+                <p style="font-size: 0.75rem; color: #999; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">Latest version: v4.2.0 | PDF format</p>
             </div>
           </div>
-          <a href="contact.html" class="btn-large">
-            Download Technical Data
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          </a>
+          <div class="hero-image-right">
+            <img src="images/standing-seam-main.png" alt="Standing Seam Roofing Sheet" />
+            <div class="floating-specs">
+                <div class="float-spec-item">
+                    <span class="float-spec-label">Substrate</span>
+                    <span class="float-spec-value">Zincalume® Steel</span>
+                </div>
+                <div class="float-spec-item">
+                    <span class="float-spec-label">Seam Height</span>
+                    <span class="float-spec-value">65mm Double Lock</span>
+                </div>
+                <div class="float-spec-item">
+                    <span class="float-spec-label">Min. Slope</span>
+                    <span class="float-spec-value">1° Degree</span>
+                </div>
+                <div class="float-spec-item">
+                    <span class="float-spec-label">Fastening</span>
+                    <span class="float-spec-value">Strictly Hidden</span>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -649,48 +719,166 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-top">
+    <div class="footer-top" style="padding-bottom: 0 !important;">
+
       <div class="footer-col footer-about">
         <div class="footer-logo" style="max-width: 200px">
           <img src="images/footer-logo.png" alt="Hexafab steels" style="width: 100%" />
         </div>
         <p class="footer-desc">
-          Hexafab steels specialize in manufacturing high-quality flat coated steel products and offer a comprehensive range of roofing solutions, setting new standards of excellence in the industry.
+          Hexafab steels specialize in manufacturing high-quality flat coated
+          steel products and offer a comprehensive range of roofing solutions,
+          setting new standards of excellence in the industry.
         </p>
       </div>
+
+
       <div class="footer-col">
         <p class="footer-col-heading">QUICK LINKS</p>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="projects.html">Gallery</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="store-locator.html">Store Locator</a></li>
+          <li>
+            <a href="about.html">About Us</a>
+          </li>
+          <li>
+            <a href="projects.html">Gallery</a>
+          </li>
+          <li>
+            <a href="resources.html">Resources</a>
+          </li>
+          <li>
+            <a href="store-locator.html">Store Locator</a>
+          </li>
         </ul>
       </div>
       <div class="footer-col">
         <p class="footer-col-heading">OUR PRODUCTS</p>
         <ul class="footer-links">
-          <li><a href="product-details.html">Standing Seam Roofing Sheet</a></li>
-          <li><a href="product-details.html">Circular Corrugated Roofing Sheet</a></li>
-          <li><a href="product-details.html">Trapezoidal Roofing Sheet</a></li>
-          <li><a href="product-details.html">C/z Purlin</a></li>
-          <li><a href="product-details.html">Deck sheet</a></li>
+          <li>
+            <a href="product-details.html">Standing Seam Roofing Sheet</a>
+          </li>
+          <li>
+            <a href="product-details.html">Circular Corrugated Roofing Sheet</a>
+          </li>
+          <li>
+            <a href="product-details.html">Trapezoidal Roofing Sheet</a>
+          </li>
+          <li>
+            <a href="product-details.html">C/z Purlin</a>
+          </li>
+          <li>
+            <a href="product-details.html">Deck sheet</a>
+          </li>
         </ul>
       </div>
       <div class="footer-col">
         <p class="footer-col-heading">GET IN TOUCH</p>
         <ul class="footer-links">
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="become-a-partner.html">Become a partner</a></li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+          <li>
+            <a href="become-a-partner.html">Become a partner</a>
+          </li>
+        </ul>
+        <p class="footer-col-heading" style="margin-top: 1.5rem">GALLERY</p>
+        <ul class="footer-links">
+          <li>
+            <a href="projects.html">Industrial</a>
+          </li>
+          <li>
+            <a href="projects.html">Commercial</a>
+          </li>
         </ul>
       </div>
+      <div class="footer-col">
+        <p class="footer-col-heading">RESOURCES</p>
+        <ul class="footer-links">
+          <li>
+            <a href="javascript:void(0);">Download Hexafab Steels Brochure</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
+
+    <div class="footer-top ccc" style="padding-top: 0 !important;">
+
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        <span><strong>Factory Address:</strong>
+          NH6, GANESH COMPLEX VILL RAGHUDEVPUR P.S RAJAPUR PIN 711322</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        <span><strong>Billing Address:</strong>
+          JEEWAN NIWAS 30A BLOCK - R, FLAT A-1 FIRST FLOOR NEW ALIPORE KOLKATA-700053</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <a href="tel:+919932292163"><strong>Contact Us: </strong> (+91) 99322 92163 | (+91) 98748 62986 | (033) 4029
+          3266</a>
+      </div>
+      <div class="footer-contact-item combined-item">
+        <div class="contact-sub-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16a2 2 0 0 1 2 2v0l-10 7L2 6v0a2 2 0 0 1 2-2z" />
+            <path d="M22 6v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6" />
+          </svg>
+          <a href="mailto:info@hexafabsteels.com"><strong>Email:</strong> info@hexafabsteels.com</a>
+        </div>
+
+        <div class="contact-sub-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+            <path d="M14 2v6h6" />
+            <path d="M8 13h8" />
+            <path d="M8 17h8" />
+          </svg>
+          <span><strong>GST NO:</strong> 19AAFCS4364R1ZI</span>
+        </div>
+      </div>
+    </div>
+
+
     <div class="footer-bottom">
-      <p class="footer-copyright">© Copyright 2024 Hexafab steels - All rights reserved</p>
+      <p class="footer-copyright">
+        © Copyright 2024 Hexafab steels - All rights reserved
+      </p>
       <div class="footer-policies">
         <a href="ims-policy.html">IMS Policy</a>
         <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-social">
+        <span class="footer-social-label">Follow us on:</span>
+        <a href="javascript:void(0);" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg>
+        </a>
+        <a href="javascript:void(0);" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="javascript:void(0);" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
       </div>
     </div>
   </footer>
