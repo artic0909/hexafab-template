@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Standing Seam Roofing Sheet - Hexafab steels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/ham.css" />
+  <style>
+    :root {
+      --primary-color: #3685b1;
+      --secondary-color: #0d2840;
+      --text-color: #333;
+      --light-bg: #f8fafc;
+      --accent-color: #4a9ac9;
+    }
+
+    .breadcrumb-wrap {
+      padding: 1.25rem 4rem;
+      background: #f8fafc;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .breadcrumb-wrap .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #777;
+    }
+
+    .breadcrumb-wrap a {
+      color: #3685b1;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb-wrap a:hover {
+      color: #0d2840;
+    }
+
+    .breadcrumb-wrap .separator {
+      color: #ccc;
+    }
+
+    .breadcrumb-wrap .current {
+      color: #222;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: 900px) {
+      .breadcrumb-wrap {
+        padding: 1rem 2rem;
+      }
+    }
+
+    .product-hero {
+      padding: 4rem 4rem 6rem;
+      background: white;
+    }
+
+    .product-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 1024px) {
+      .product-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .product-hero {
+        padding: 4rem 2rem;
+      }
+    }
+
+    .product-image-box {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+      aspect-ratio: 1/1;
+      background: #f0f4f8;
+    }
+
+    .product-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .product-image-box:hover img {
+      transform: scale(1.08);
+    }
+
+    .product-info {
+      padding: 1rem;
+    }
+
+    .product-tag {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      background: rgba(54, 133, 177, 0.08);
+      color: var(--primary-color);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 0.75rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(54, 133, 177, 0.2);
+      backdrop-filter: blur(4px);
+    }
+
+    .product-title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      color: var(--secondary-color);
+      line-height: 1.05;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .product-description {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 3rem;
+      max-width: 600px;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+      padding: 2rem;
+      background: var(--light-bg);
+      border-radius: 20px;
+    }
+
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .spec-label {
+      font-size: 0.75rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+    }
+
+    .spec-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+    }
+
+    .btn-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 3.5rem;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 16px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 15px 35px rgba(54, 133, 177, 0.3);
+    }
+
+    .btn-large:hover {
+      background: var(--secondary-color);
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 20px 45px rgba(13, 40, 64, 0.35);
+    }
+
+    /* Applications Section */
+    .applications-section {
+      padding: 6rem 4rem;
+      background: #0d2840;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .applications-section::after {
+        content: '';
+        position: absolute;
+        bottom: -10%;
+        right: -5%;
+        width: 40%;
+        height: 60%;
+        background: radial-gradient(circle, rgba(54, 133, 177, 0.1) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 4rem;
+    }
+
+    .section-header-center .section-label {
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .section-header-center h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: white;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .apps-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 3rem;
+    }
+
+    .app-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: all 0.5s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .app-card:hover {
+      transform: translateY(-15px);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--primary-color);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+
+    .app-image {
+      height: 280px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .app-card:hover .app-image img {
+      transform: scale(1.15) rotate(2deg);
+    }
+
+    .app-content {
+      padding: 3rem;
+      flex: 1;
+    }
+
+    .app-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1.25rem;
+    }
+
+    .app-desc {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Info Grid */
+    .detailed-info {
+        padding: 6rem 4rem;
+        background: white;
+    }
+
+    .info-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+
+    @media (max-width: 900px) {
+        .product-hero,
+        .applications-section,
+        .detailed-info {
+            padding: 4rem 2rem;
+        }
+        .product-title {
+            font-size: 3rem;
+        }
+        .info-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .product-hero,
+        .applications-section,
+        .detailed-info {
+            padding: 3rem 1.5rem;
+        }
+        .product-title {
+            font-size: 2.25rem;
+        }
+        .specs-grid {
+            grid-template-columns: 1fr;
+            padding: 1.5rem;
+        }
+        .btn-large {
+            width: 100%;
+            justify-content: center;
+            padding: 1.25rem 2rem;
+        }
+        .apps-grid {
+            grid-template-columns: 1fr;
+        }
+        .info-item {
+            padding: 2rem;
+        }
+    }
+
+    .info-item {
+        padding: 2.5rem;
+        background: var(--light-bg);
+        border-radius: 24px;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        height: 100%;
+    }
+
+    @media (max-width: 600px) {
+        .info-item {
+            padding: 2rem;
+        }
+    }
+
+    .info-item:hover {
+        background: white;
+        border-color: rgba(54, 133, 177, 0.1);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        transform: scale(1.05);
+    }
+
+    .info-icon {
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .info-item h4 {
+        font-size: 1.4rem;
+        color: var(--secondary-color);
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .info-item p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="images/Hexafab-logo.png" alt="Hexafab steels" />
+      </a>
+      <nav class="nav-main">
+        <a href="about.html">ABOUT US</a>
+        <a href="products.html">PRODUCTS </a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="projects.html">PROJECTS</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="header-search" aria-label="Search" title="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Menu" title="Menu" id="hamburger">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header-search-overlay" id="headerSearchOverlay" aria-hidden="true">
+    <div class="search-form-wrap">
+      <button type="button" class="search-close" id="searchClose" aria-label="Close search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <form class="search-form" action="javascript:void(0);" method="get" role="search">
+        <input type="search" name="s" class="search-input" placeholder="Search..." autocomplete="off"
+          id="headerSearchInput" />
+        <button type="submit" class="search-submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="offcanvas" id="offcanvasMenu" aria-hidden="true">
+    <div class="offcanvas-backdrop" id="offcanvasBackdrop"></div>
+    <div class="offcanvas-panel">
+      <div class="offcanvas-header">
+        <a href="index.html" class="offcanvas-logo">
+          <img src="images/Hexafab-logo.png" alt="Hexafab steels Coated Steel" />
+        </a>
+      </div>
+      <div class="offcanvas-body">
+        <div class="offcanvas-col">
+          <ul class="offcanvas-nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="projects.html">OUR PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="become-a-partner.html">BECOME A PARTNER</a></li>
+          </ul>
+        </div>
+        <div class="offcanvas-col">
+          <p class="offcanvas-col-label">OUR Products</p>
+          <ul class="offcanvas-brands">
+            <li><a href="product-details.html">Standing Seam Roofing Sheet</a></li>
+            <li><a href="product-details.html">Circular Corrugated Roofing Sheet</a></li>
+            <li><a href="product-details.html">Trapezoidal Roofing Sheet</a></li>
+            <li><a href="product-details.html">C/z Purlin</a></li>
+            <li><a href="product-details.html">Deck sheet</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="offcanvas-footer">
+        <div class="offcanvas-social">
+          <span class="offcanvas-social-label">Follow us on:</span>
+          <a href="javascript:void(0);" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="javascript:void(0);" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="offcanvas-close" id="offcanvasClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="breadcrumb-wrap">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="separator">/</span>
+      <a href="products.html">Products</a>
+      <span class="separator">/</span>
+      <span class="current">Standing Seam Roofing Sheet</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="product-hero">
+      <div class="product-container">
+        <div class="product-image-box">
+          <img src="images/standing-seam-main.png" alt="Standing Seam Roofing Sheet" />
+        </div>
+        <div class="product-info">
+          <span class="product-tag">Flagship Product</span>
+          <h1 class="product-title">Hexa-Standing <br>Seam Series</h1>
+          <p class="product-description">
+            Experience the pinnacle of roofing technology with our Standing Seam series. Engineered for visionary architects and industrial pioneers, this system offers a completely fastener-free surface, ensuring 100% watertight integrity and a modern, minimalist silhouette.
+          </p>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Substrate</span>
+              <span class="spec-value">Cold Rolled High-Tensile Steel</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Profile Width</span>
+              <span class="spec-value">300mm / 450mm / 500mm</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Finish</span>
+              <span class="spec-value">PVDF / SMP / SDP Coatings</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Seam Height</span>
+              <span class="spec-value">65mm Double Lock</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn-large">
+            Download Technical Data
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="applications-section">
+      <div class="section-header-center">
+        <span class="section-label">Where It ExcelS</span>
+        <h2>Precision Engineering for <br>Diverse Environments</h2>
+      </div>
+      <div class="apps-grid">
+        <div class="app-card">
+          <div class="app-image">
+            <img src="images/factory-image.webp" alt="Industrial Megastructures" />
+          </div>
+          <div class="app-content">
+            <h3 class="app-title">Industrial Megastructures</h3>
+            <p class="app-desc">From expansive automotive plants to logistics parks, the standing seam system provides unmatched protection for sensitive high-tech inventory and machinery.</p>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-image">
+            <img src="images/Hero-banner-1.webp" alt="Modern Architecture" />
+          </div>
+          <div class="app-content">
+            <h3 class="app-title">Commercial Hubs</h3>
+            <p class="app-desc">Define the skyline with sleek, vertical lines. Perfect for premium office complexes, airports, and stadiums that require a bold architectural statement.</p>
+          </div>
+        </div>
+        <div class="app-card">
+          <div class="app-image">
+            <img src="images/residential-house1.webp" alt="Residential Luxury" />
+          </div>
+          <div class="app-content">
+            <h3 class="app-title">Coastal Residences</h3>
+            <p class="app-desc">Our specialized anti-corrosive coatings make this the ideal choice for luxury seaside villas, resisting salt spray and high humidity with ease.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detailed-info">
+        <div class="info-container">
+            <div class="section-header-center">
+                <span class="section-label">Performance Core</span>
+                <h2 style="color:#0d2840">Lots of Information for <br>Technical Decisions</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h4>Mechanical Seaming</h4>
+                    <p>Unlike traditional roofing that uses screws, our standing seam panels are mechanically folded over each other using specialized robots. This creates a 100% puncture-free roof surface, fundamentally eliminating the possibility of leaks.</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.93 4.93l14.14 14.14M2 12h20M12 2v20"></path></svg>
+                    </div>
+                    <h4>Thermal Expansion</h4>
+                    <p>The panels are secured using a concealed clip system that allows the steel to slide during heat-induced expansion and contraction. This prevents oil-canning (rippling) and ensures the roof remains flat and beautiful in extreme climates.</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                    </div>
+                    <h4>Longevity & ROI</h4>
+                    <p>With an expected lifespan exceeding 50 years, the Standing Seam system offers the lowest total cost of ownership in the industry. It requires zero maintenance and significantly increases the resale value of any property.</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    </div>
+                    <h4>Acoustic Dampening</h4>
+                    <p>Optional integrated acoustic layers can be installed between the panel and the substrate, effectively reducing noise from heavy rainfall or hail by up to 25 decibels, creating a peaceful indoor environment.</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                    </div>
+                    <h4>Alu-Zinc Technology</h4>
+                    <p>Our steel is coated with a precise alloy of Aluminum, Zinc, and Silicon. The aluminum provides barrier protection against corrosion, while the zinc offers sacrificial protection for any cut edges or scratches.</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <h4>Solar Integration</h4>
+                    <p>The standing seam system is the perfect substrate for solar PV panels. Specialized S-5! clips allow for solar mounting without a single roof penetration, maintaining the warranty while generating clean energy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col footer-about">
+        <div class="footer-logo" style="max-width: 200px">
+          <img src="images/footer-logo.png" alt="Hexafab steels" style="width: 100%" />
+        </div>
+        <p class="footer-desc">
+          Hexafab steels specialize in manufacturing high-quality flat coated steel products and offer a comprehensive range of roofing solutions, setting new standards of excellence in the industry.
+        </p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-heading">QUICK LINKS</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Gallery</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="store-locator.html">Store Locator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-heading">OUR PRODUCTS</p>
+        <ul class="footer-links">
+          <li><a href="product-details.html">Standing Seam Roofing Sheet</a></li>
+          <li><a href="product-details.html">Circular Corrugated Roofing Sheet</a></li>
+          <li><a href="product-details.html">Trapezoidal Roofing Sheet</a></li>
+          <li><a href="product-details.html">C/z Purlin</a></li>
+          <li><a href="product-details.html">Deck sheet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-heading">GET IN TOUCH</p>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="become-a-partner.html">Become a partner</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© Copyright 2024 Hexafab steels - All rights reserved</p>
+      <div class="footer-policies">
+        <a href="ims-policy.html">IMS Policy</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module">
+    import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.18/dist/lenis.mjs"
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    })
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  </script>
+  <script>
+    (function () {
+      var searchBtn = document.querySelector(".header-search")
+      var overlay = document.getElementById("headerSearchOverlay")
+      var searchInput = document.getElementById("headerSearchInput")
+      var searchClose = document.getElementById("searchClose")
+      if (!searchBtn || !overlay) return
+      searchBtn.addEventListener("click", function () {
+        document.body.classList.add("is-search-open")
+        overlay.setAttribute("aria-hidden", "false")
+        if (searchInput) searchInput.focus()
+      })
+      searchClose.addEventListener("click", function () {
+        document.body.classList.remove("is-search-open")
+        overlay.setAttribute("aria-hidden", "true")
+      })
+    })();
+    (function () {
+      var menuToggle = document.querySelector(".menu-toggle")
+      var offcanvas = document.getElementById("offcanvasMenu")
+      var offcanvasClose = document.getElementById("offcanvasClose")
+      var offcanvasBackdrop = document.getElementById("offcanvasBackdrop")
+      if (!menuToggle || !offcanvas) return
+      menuToggle.addEventListener("click", function () {
+        document.body.classList.add("is-offcanvas-open")
+        offcanvas.setAttribute("aria-hidden", "false")
+      })
+      offcanvasClose.addEventListener("click", function () {
+        document.body.classList.remove("is-offcanvas-open")
+        offcanvas.setAttribute("aria-hidden", "true")
+      })
+      if (offcanvasBackdrop) offcanvasBackdrop.addEventListener("click", function () {
+        document.body.classList.remove("is-offcanvas-open")
+        offcanvas.setAttribute("aria-hidden", "true")
+      })
+    })();
+  </script>
+</body>
+
+</html>
