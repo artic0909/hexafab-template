@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Projects - Hexafab steels Coated Steel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .ccc {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 2.5rem !important;
+      align-items: start !important;
+      padding-bottom: 3rem !important;
+    }
+
+    .footer-contact-item {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 0.85rem !important;
+      min-width: 0 !important;
+    }
+
+    .footer-contact-item.combined-item {
+      flex-direction: column !important;
+      gap: 1.25rem !important;
+    }
+
+    .contact-sub-item {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 0.85rem !important;
+    }
+
+    .footer-contact-item span,
+    .footer-contact-item a,
+    .contact-sub-item span,
+    .contact-sub-item a {
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+      font-size: 0.9375rem !important;
+      line-height: 1.6 !important;
+      color: #555 !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .footer-contact-item a:hover,
+    .contact-sub-item a:hover {
+      color: #3685b1 !important;
+    }
+
+    .footer-contact-item strong,
+    .contact-sub-item strong {
+      display: inline-block !important;
+      margin-right: 4px !important;
+      color: #1a1a1a !important;
+      white-space: nowrap !important;
+    }
+
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.75rem 2rem;
+      background: #f0f4f7;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      color: #1a1a1a;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: #3685b1;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(54, 133, 177, 0.3);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 16/11;
+      cursor: pointer;
+    }
+
+    .project-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(13, 40, 64, 0.9) 0%, rgba(13, 40, 64, 0.2) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .project-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .project-item:hover .project-overlay {
+      opacity: 1;
+    }
+
+    .project-type {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #3685b1;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-location {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-filters {
+        gap: 0.75rem;
+      }
+      .filter-btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="images/Hexafab-logo.png" alt="Hexafab steels" />
+      </a>
+      <nav class="nav-main">
+        <a href="about.html">ABOUT US</a>
+        <a href="products.html">PRODUCTS </a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="projects.html" class="active">PROJECTS</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="header-search" aria-label="Search" title="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Menu" title="Menu" id="hamburger">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header-search-overlay" id="headerSearchOverlay" aria-hidden="true">
+    <div class="search-form-wrap">
+      <button type="button" class="search-close" id="searchClose" aria-label="Close search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <form class="search-form" action="javascript:void(0);" method="get" role="search">
+        <input type="search" name="s" class="search-input" placeholder="Search..." autocomplete="off"
+          id="headerSearchInput" />
+        <button type="submit" class="search-submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="offcanvas" id="offcanvasMenu" aria-hidden="true">
+    <div class="offcanvas-backdrop" id="offcanvasBackdrop"></div>
+    <div class="offcanvas-panel">
+      <div class="offcanvas-header">
+        <a href="index.html" class="offcanvas-logo">
+          <img src="images/Hexafab-logo.png" alt="Hexafab steels Coated Steel" />
+        </a>
+      </div>
+      <div class="offcanvas-body">
+        <div class="offcanvas-col">
+          <ul class="offcanvas-nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="projects.html" class="active">OUR PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="offcanvas-close" id="offcanvasClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+  </div>
+
+  <main>
+    <section class="internal-hero" style="background-image: url('images/factory-image.webp');">
+      <div class="internal-hero-content">
+        <p class="page-label">Showcase</p>
+        <h1>Our Iconic Projects Portfolio</h1>
+      </div>
+    </section>
+
+    <div class="breadcrumb-wrap">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Projects</span>
+      </div>
+    </div>
+
+    <section class="internal-content-section" style="padding-top: 4rem;">
+      <div class="container">
+        <div class="gallery-filters">
+          <button class="filter-btn active">All Projects</button>
+          <button class="filter-btn">Industrial</button>
+          <button class="filter-btn">Commercial</button>
+          <button class="filter-btn">Residential</button>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-item">
+            <img src="images/factory-image.webp" alt="Project 1" />
+            <div class="project-overlay">
+              <span class="project-type">Industrial</span>
+              <h3 class="project-title">Steel Manufacturing Hub</h3>
+              <p class="project-location">Gujarat, India</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <img src="images/commercial-building-2.webp" alt="Project 2" />
+            <div class="project-overlay">
+              <span class="project-type">Commercial</span>
+              <h3 class="project-title">Corporate Tech Park</h3>
+              <p class="project-location">Bangalore, India</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <img src="images/residential-house1.webp" alt="Project 3" />
+            <div class="project-overlay">
+              <span class="project-type">Residential</span>
+              <h3 class="project-title">Luxury Villa Complex</h3>
+              <p class="project-location">Pune, India</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <img src="images/Deck-sheets/DackSheetBanner.png" alt="Project 4" />
+            <div class="project-overlay">
+              <span class="project-type">Industrial</span>
+              <h3 class="project-title">Logistics Warehouse</h3>
+              <p class="project-location">Haryana, India</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+             <img src="images/Trapezoidal-Roofing-Sheet/TrapezoidalRoofingSheetBanner.png" alt="Project 5" />
+            <div class="project-overlay">
+              <span class="project-type">Industrial</span>
+              <h3 class="project-title">Automobile Assembly Line</h3>
+              <p class="project-location">Tamil Nadu, India</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <img src="images/Circular-Corrugated-Roofing-Sheet/CircularCorrugatedRoofingSheetBanner.png" alt="Project 6" />
+            <div class="project-overlay">
+              <span class="project-type">Residential</span>
+              <h3 class="project-title">Classic Estate Roofing</h3>
+              <p class="project-location">Himachal, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top" style="padding-bottom: 0 !important;">
+      <div class="footer-col footer-about">
+        <div class="footer-logo" style="max-width: 200px">
+          <img src="images/footer-logo.png" alt="Hexafab steels" style="width: 100%" />
+        </div>
+        <p class="footer-desc">
+          Hexafab steels specialize in manufacturing high-quality flat coated
+          steel products and offer a comprehensive range of roofing solutions,
+          setting new standards of excellence in the industry.
+        </p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-heading">QUICK LINKS</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Gallery</a></li>
+          <li><a href="javascript:void(0);">Resources</a></li>
+          <li><a href="javascript:void(0);">Store Locator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-heading">OUR PRODUCTS</p>
+        <ul class="footer-links">
+          <li>
+            <a href="products.html">Standing Seam Roofing Sheet</a>
+          </li>
+          <li>
+            <a href="products.html">Circular Corrugated Roofing Sheet</a>
+          </li>
+          <li>
+            <a href="products.html">Trapezoidal Roofing Sheet</a>
+          </li>
+          <li>
+            <a href="products.html">C/z Purlin</a>
+          </li>
+          <li>
+            <a href="products.html">Deck sheet</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-heading">GET IN TOUCH</p>
+        <ul class="footer-links">
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">Become a partner</a>
+          </li>
+        </ul>
+        <p class="footer-col-heading" style="margin-top: 1.5rem">GALLERY</p>
+        <ul class="footer-links">
+          <li>
+            <a href="projects.html">Industrial</a>
+          </li>
+          <li>
+            <a href="projects.html">Commercial</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-heading">RESOURCES</p>
+        <ul class="footer-links">
+          <li>
+            <a href="javascript:void(0);">Download Hexafab Steels Brochure</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-top ccc" style="padding-top: 0 !important;">
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        <span><strong>Factory Address:</strong>
+          NH6, GANESH COMPLEX VILL RAGHUDEVPUR P.S RAJAPUR PIN 711322</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        <span><strong>Billing Address:</strong>
+          JEEWAN NIWAS 30A BLOCK - R, FLAT A-1 FIRST FLOOR NEW ALIPORE KOLKATA-700053</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <a href="tel:+919932292163"><strong>Contact Us: </strong> (+91) 99322 92163 | (+91) 98748 62986 | (033) 4029
+          3266</a>
+      </div>
+      <div class="footer-contact-item combined-item">
+        <div class="contact-sub-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16a2 2 0 0 1 2 2v0l-10 7L2 6v0a2 2 0 0 1 2-2z" />
+            <path d="M22 6v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6" />
+          </svg>
+          <a href="mailto:info@hexafabsteels.com"><strong>Email:</strong> info@hexafabsteels.com</a>
+        </div>
+        <div class="contact-sub-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+            <path d="M14 2v6h6" />
+            <path d="M8 13h8" />
+            <path d="M8 17h8" />
+          </svg>
+          <span><strong>GST NO:</strong> 19AAFCS4364R1ZI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        © Copyright 2024 Hexafab steels - All rights reserved
+      </p>
+      <div class="footer-policies">
+        <a href="javascript:void(0);">IMS Policy</a>
+        <a href="javascript:void(0);">Privacy Policy</a>
+      </div>
+      <div class="footer-social">
+        <span class="footer-social-label">Follow us on:</span>
+        <a href="javascript:void(0);" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg>
+        </a>
+        <a href="javascript:void(0);" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="javascript:void(0);" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module">
+    import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.18/dist/lenis.mjs"
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    })
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  </script>
+</body>
+</html>
